@@ -13,13 +13,12 @@ The app was made in Xamarin.Forms using .NET 6 and C#:
 
 ## **Main functionality**
 
-### Navigation
-
-The navigation is done via a flyout menu on the left. The app has 2 main pages, one for Tit birds, and one for Vultures.
-You can select from the available birds via a drop-down menu and then see the details about it.
-The images can be made fullscreen by single tapping them, and then zoomed-in further by double-tapping.
-One tap to un-zoom. Slide down to dismiss fullscreen or tap once when zoomed-out.
-There is a page for the author with an image and some text. At the footer of the flyout menu you can see the current date.
+- Flyout menu on the left. Two main pages, one for Tit birds, and one for Vultures;
+- You can select from the available birds via a drop-down menu and then see the details about it;
+- Single-tap to make the image fullscreen, and then double-tap to zoom-in futrher;
+- One tap to un-zoom. Slide down to dismiss fullscreen or tap once when zoomed-out;
+- At the footer of the flyout menu you can see the current date;
+- Info page about the author.
 
 ## **Screenshots**
 

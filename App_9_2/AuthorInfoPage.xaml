@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_9_2.AuthorInfoPage">
+
+
+    <StackLayout>
+        <StackLayout.Background>
+            <LinearGradientBrush StartPoint="0,0"
+                         EndPoint="1,1">
+                <GradientStop Color="White"
+                    Offset="0.0" />
+                <GradientStop Color="LightGreen"
+                    Offset="0.2" />
+                <GradientStop Color="Green"
+                    Offset="0.5" />
+                <GradientStop Color="DarkGreen"
+                    Offset="1.0" />
+            </LinearGradientBrush>
+        </StackLayout.Background>
+
+        <Grid RowDefinitions="Auto, 30, *, Auto">
+            <Grid Grid.Row="0" Grid.Column="0" ColumnDefinitions="Auto, *">
+                <Grid Grid.Column="0" VerticalOptions="StartAndExpand" HorizontalOptions="StartAndExpand">
+                    <BoxView WidthRequest="5" HeightRequest="100"
+                     Color="Black" HorizontalOptions="Center" VerticalOptions="Center"
+                     TranslationX="-45" TranslationY="-153" Rotation="60"/>
+                    <BoxView WidthRequest="5" HeightRequest="100"
+                     Color="Black" HorizontalOptions="Center" VerticalOptions="Center"
+                     TranslationX="45" TranslationY="-153" Rotation="-60"/>
+                    <BoxView WidthRequest="15" HeightRequest="15"
+                     Color="Black" HorizontalOptions="Center" VerticalOptions="Center"
+                     TranslationX="0" TranslationY="-175"/>
+
+                    <Frame Background="Brown" HorizontalOptions="Start"
+                           HeightRequest="280" MinimumHeightRequest="280"
+                           Margin="20, 60, 20, 20" Padding="10">
+                        <Frame Background="Black" Padding="5">
+                            <Grid>
+                                <Image Source="@drawable/MyPortrait" Aspect="AspectFill"/>
+                                <Image Source="@drawable/Glass"  WidthRequest="10"
+                               Opacity="0.2" Aspect="AspectFill"/>
+                            </Grid>
+                        </Frame>
+                    </Frame>
+                </Grid>
+
+                <StackLayout Grid.Column="1" Margin="0, 69, 0, 0" HorizontalOptions="CenterAndExpand">
+                    <Label Text="Цветелин Георгиев" HorizontalTextAlignment="End" VerticalOptions="Center"
+                   FontSize="Large"  FontAttributes="Bold" TextColor="Black" Margin="0, 0, 20, 0"/>
+                    <Label Text="Информационни Системи и технологии" HorizontalTextAlignment="End" VerticalOptions="Center"
+                   FontSize="Subtitle"  FontAttributes="Bold,Italic" TextColor="Black" Margin="0, 0, 20, 0"/>
+                    <Label Text="20251421001" HorizontalTextAlignment="End" VerticalOptions="Center"
+                   FontSize="Subtitle"  FontAttributes="Bold,Italic" TextColor="Black" Margin="0, 0, 20, 0"/>
+                    <Label Text="Обича да спи, пие бира и яде." HorizontalTextAlignment="End" VerticalOptions="Center"
+                   FontSize="Subtitle"  FontAttributes="Bold,Italic" TextColor="Black" Margin="0, 0, 20, 0"/>
+                    <Label Text="*Не съм се снимал в банята, снимката излъчва топлина и става конденз." HorizontalTextAlignment="End" VerticalOptions="Center"
+                   FontSize="Caption" FontAttributes="Bold,Italic" TextColor="Black" Margin="0, 0, 20, 0"/>
+                </StackLayout>
+            </Grid>
+
+
+            <Label Grid.Row="1" Text="Цитати:" FontSize="Title" FontAttributes="Bold"
+                   TextColor="Black" Margin="10, 0, 0, 0"/>
+
+            <Frame Grid.Row="2" BackgroundColor="#d8ffd8" Margin="10" CornerRadius="15" HeightRequest="160">
+                <ScrollView VerticalOptions="FillAndExpand" >
+                    <Label Text="{Binding QuotesText}" FontSize="Medium" FontAttributes="Bold"
+                               TextColor="Black" Margin="10, 0, 0, 0" VerticalOptions="FillAndExpand"/>
+                </ScrollView>
+            </Frame>
+
+            <Label Grid.Row="3" Text="И още много други..." FontSize="Medium" FontAttributes="Italic"
+                   Margin="0, -10, 15, 0" HorizontalTextAlignment="End" HorizontalOptions="End"
+                   HeightRequest="40" MinimumHeightRequest="40"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>

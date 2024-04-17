@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App_9_2.TitBirdsPage"
+             Title="Tits page">
+
+    <Grid BackgroundColor="#e5fbe5">
+        <StackLayout>
+            <Picker x:Name="PickerTitBird" HorizontalOptions="Center"
+                Title="Изберете вид синигер" Margin="0, 10, 0, 0"
+                TitleColor="Black" FontAttributes="Italic,Bold"
+                HorizontalTextAlignment="Center"
+                WidthRequest="280" HeightRequest="45"
+                ItemsSource="{Binding Birds}"
+                ItemDisplayBinding="{Binding Name}"
+                SelectedItem="{Binding SelectedBird}">
+            </Picker>
+
+            <Grid VerticalOptions="FillAndExpand">
+                <BoxView VerticalOptions="FillAndExpand" BackgroundColor="Black"/>
+
+                <Image Source="@drawable/BackgroundImage"
+                       Aspect="AspectFill" Opacity="0.6"/>
+
+                <StackLayout Padding="20" HorizontalOptions="Fill">
+                    <Frame BackgroundColor="DarkGreen" CornerRadius="25"
+                           Margin="20, -10, 20, 0" Padding="10">
+                        <Label Text="{Binding SelectedBird.Name}"
+                               HorizontalOptions="Center" TextColor="White" FontSize="Large"/>
+                    </Frame>
+                    <Frame  BackgroundColor="White" CornerRadius="25"
+                            Margin="70, 0, 70, 0" Padding="7">
+                        <Label Text="{Binding SelectedBird.EndangeredInfo}"
+                           HorizontalOptions="Center" TextColor="{Binding SelectedBird.IsEndangeredLabelColor}"
+                           FontSize="Medium" FontAttributes="Italic,Bold"/>
+                    </Frame>
+
+                    <Frame Margin="5" Padding="5" CornerRadius="15"
+                           BackgroundColor="#d8ffd8" HeightRequest="75">
+                        <ScrollView VerticalOptions="FillAndExpand" >
+                            <Label  Text="{Binding SelectedBird.ResidesInAreas}"
+                            TextColor="Black" Margin="15, 5, 5, 5" FontAttributes="Italic"
+                            FontSize="Medium" VerticalOptions="FillAndExpand"/>
+                        </ScrollView>
+                    </Frame>
+
+                    <Grid Padding="0, 7, 0, 0" RowDefinitions="Auto, *">
+                        <Frame Grid.Row="0" BackgroundColor="Black" CornerRadius="30"
+                           HasShadow="True" MinimumHeightRequest="192" HeightRequest="192"
+                           HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                            <CarouselView x:Name="CarouselElement" ItemsSource="{Binding SelectedBird.ImageUrls}"
+                                      PeekAreaInsets="20" Margin="0, 10, 0, 10">
+                                <CarouselView.ItemsLayout>
+                                    <LinearItemsLayout ItemSpacing="10" SnapPointsAlignment="Center"
+                                                   SnapPointsType="MandatorySingle" Orientation="Horizontal"/>
+                                </CarouselView.ItemsLayout>
+                                <CarouselView.ItemTemplate>
+                                    <DataTemplate>
+                                        <Image Source="{Binding}" Aspect="AspectFill">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_PreviewImage"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                    </DataTemplate>
+                                </CarouselView.ItemTemplate>
+                            </CarouselView>
+                        </Frame>
+
+                        <BoxView BackgroundColor="LightGray" HorizontalOptions="Center" VerticalOptions="Center"
+                             WidthRequest="15" HeightRequest="20" 
+                             TranslationX="-120" TranslationY="-100"/>
+                        <BoxView BackgroundColor="LightGray" HorizontalOptions="Center" VerticalOptions="Center"
+                             WidthRequest="15" HeightRequest="20"
+                             TranslationX="-70" TranslationY="-100"/>
+                        <BoxView BackgroundColor="LightGray" HorizontalOptions="Center" VerticalOptions="Center"
+                             WidthRequest="15" HeightRequest="20"
+                             TranslationX="-20" TranslationY="-100"/>
+                        <BoxView BackgroundColor="LightGray" HorizontalOptions="Center" VerticalOptions="Center"
+                             WidthRequest="15" HeightRequest="20"
+                             TranslationX="30" TranslationY="-100"/>
+                        <BoxView BackgroundColor="LightGray" HorizontalOptions="Center" VerticalOptions="Center"
+                             WidthRequest="15" HeightRequest="20"
+                             TranslationX="80" TranslationY="-100"/>
+                        <BoxView BackgroundColor="LightGray" HorizontalOptions="Center" VerticalOptions="Center"
+                             WidthRequest="15" HeightRequest="20"
+                             TranslationX="130" TranslationY="-100"/>
+
+                        <BoxView BackgroundColor="LightGray" HorizontalOptions="Center" VerticalOptions="Center"
+                             WidthRequest="15" HeightRequest="20" 
+                             TranslationX="-120" TranslationY="101"/>
+                        <BoxView BackgroundColor="LightGray" HorizontalOptions="Center" VerticalOptions="Center"
+                             WidthRequest="15" HeightRequest="20"
+                             TranslationX="-70" TranslationY="101"/>
+                        <BoxView BackgroundColor="LightGray" HorizontalOptions="Center" VerticalOptions="Center"
+                             WidthRequest="15" HeightRequest="20"
+                             TranslationX="-20" TranslationY="101"/>
+                        <BoxView BackgroundColor="LightGray" HorizontalOptions="Center" VerticalOptions="Center"
+                             WidthRequest="15" HeightRequest="20"
+                             TranslationX="30" TranslationY="101"/>
+                        <BoxView BackgroundColor="LightGray" HorizontalOptions="Center" VerticalOptions="Center"
+                             WidthRequest="15" HeightRequest="20"
+                             TranslationX="80" TranslationY="101"/>
+                        <BoxView BackgroundColor="LightGray" HorizontalOptions="Center" VerticalOptions="Center"
+                             WidthRequest="15" HeightRequest="20"
+                             TranslationX="130" TranslationY="101"/>
+
+                        <Frame Grid.Row="1" Margin="10" Padding="5" CornerRadius="15"
+                               VerticalOptions="StartAndExpand" BackgroundColor="#003b00">
+                            <ScrollView VerticalOptions="FillAndExpand" >
+                                <Label Text="{Binding SelectedBird.Description}"
+                                       TextColor="White" Margin="15, 5, 5, 5" FontAttributes="Italic"
+                                       FontSize="Medium" VerticalOptions="FillAndExpand"/>
+                            </ScrollView>
+                        </Frame>
+                    </Grid>
+
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+
+        <BoxView x:Name="ZoomedModeDarkening" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                 BackgroundColor="Black" Opacity="0.5">
+            <BoxView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_ZoomedImage"/>
+            </BoxView.GestureRecognizers>
+        </BoxView>
+        <Image x:Name="ZoomedImage" Aspect="AspectFit"
+                   VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_ZoomedImage_Twice" NumberOfTapsRequired="2"/>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_ZoomedImage"/>
+                <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated"/>
+            </Image.GestureRecognizers>
+        </Image>
+    </Grid>
+
+</ContentPage>

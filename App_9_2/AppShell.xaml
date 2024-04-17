@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:App_9_2" x:DataType="views:AppShell"
+       xmlns:local="clr-namespace:App_9_2.ViewModels"
+       x:Class="App_9_2.AppShell"
+       FlyoutBackdrop="Silver"
+       BackgroundColor="Green">
+
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="Black"
+                  HeightRequest="200">
+                <Image Aspect="AspectFill"
+                       Source="@drawable/ShellHeaderImage.jpg"
+                       Opacity="0.65" />
+                <Label Text="Птици в България"
+                       TextColor="White"
+                       FontAttributes="Bold"
+                       FontSize="Medium"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </Shell.FlyoutHeaderTemplate>
+
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <Grid ColumnDefinitions="0.2*, 0.8*" RowDefinitions="35">
+                <Image Grid.Column="0"
+                       Source="@drawable/infoIcon.png"
+                       HorizontalOptions="EndAndExpand"
+                       Margin="5"/>
+                <Label Grid.Column="1"
+                       TextColor="#004b00"
+                       Text="За автора"
+                       FontSize="Medium"
+                       FontAttributes="Italic"
+                       VerticalTextAlignment="Center"
+                       HorizontalOptions="StartAndExpand"/>
+            </Grid>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
+
+    <Shell.FlyoutBackground>
+        <LinearGradientBrush StartPoint="0,0"
+                         EndPoint="1,1">
+            <GradientStop Color="CornflowerBlue"
+                    Offset="0.1" />
+            <GradientStop Color="Coral"
+                    Offset="1.0" />
+        </LinearGradientBrush>
+    </Shell.FlyoutBackground>
+
+    <ShellContent
+        Title="Синигери"
+        x:Name="TitsPage"
+                ContentTemplate="{DataTemplate views:TitBirdsPage}"/>
+
+    <ShellContent
+        Title="Лешояди"
+        ContentTemplate="{DataTemplate views:VultureBirdsPage}"/>
+
+    <MenuItem
+        Command="{Binding HelpCommand}"
+        CommandParameter="https://learn.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />
+
+    <Shell.FlyoutFooter>
+        <Grid RowDefinitions="0.5*, 0.5*" BackgroundColor="Black" HeightRequest="120">
+            <Label Grid.Row="0" Text="Синигери и лешояди в България"
+                   TextColor="GhostWhite" FontSize="Medium"
+                   VerticalOptions="CenterAndExpand"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"/>
+            <Label Grid.Row="1" Text="{Binding Source={x:Static local:BirdViewModel.CurrentDate}}"
+                   TextColor="GhostWhite" FontSize="Medium"
+                   VerticalOptions="StartAndExpand"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"/>
+        </Grid>
+    </Shell.FlyoutFooter>
+</Shell>

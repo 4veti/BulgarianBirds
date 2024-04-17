@@ -1,12 +1,19 @@
 # Mobile app for Bulgarian Birds for a uni assignment
 
+## **Summary**
+I made this app as a uni project for my mobile development classes. Initially it was a single-page app with a much simpler design, but I decided to extend it as a final project for the subject. There were several hurdles to overcome:
+
+1. The xaml language. Dealing with the visual heirarchy and making the design render properly on different screen sizes really was a challenge. However, I much enjoyed the process of learning the new technology and being able to express myself better through the UI.
+2. The Shell structure. Figuring out how to configure it properly, render the flyout menu, and the pagination, definitely took some time. It was a good experience getting used to reading through Microsoft documentation.
+3. The Model-View-ViewModel pattern. It isn't anything fancy, but I still consider it a good experience to have implemented it at least once.
+
 ## **How it's made**
 
 The app was made in Xamarin.Forms using .NET 6 and C#:
 
 - [XAML](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/xaml/?view=netdesktop-8.0) - Xml-based markup language;
-- [MVVM](https://learn.microsoft.com/en-us/dotnet/architecture/maui/mvvm) - Model-View-ViewModel patter;
 - [Shell](https://learn.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/shell/) - Reduces the complexity of mobile application development by providing the fundamental features that most mobile applications require.
+- [MVVM](https://learn.microsoft.com/en-us/dotnet/architecture/maui/mvvm) - Model-View-ViewModel pattern;
 
 ## **Visual representation of the project directory**
 ![ProjectTree](https://github.com/4veti/BulgarianBirds/assets/37193765/880f1432-4006-4643-93e3-ff85b0a947df)

@@ -11,7 +11,7 @@ The app was made in Xamarin.Forms using .NET 6 and C#:
 ## **Visual representation of the project directory**
 ![ProjectTree](https://github.com/4veti/BulgarianBirds/assets/37193765/880f1432-4006-4643-93e3-ff85b0a947df)
 
-## **Main functionality***
+## **Main functionality**
 
 ### Navigation
 

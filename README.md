@@ -15,9 +15,6 @@ The app was made in Xamarin.Forms using .NET 6 and C#:
 - [Shell](https://learn.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/shell/) - Reduces the complexity of mobile application development by providing the fundamental features that most mobile applications require.
 - [MVVM](https://learn.microsoft.com/en-us/dotnet/architecture/maui/mvvm) - Model-View-ViewModel pattern;
 
-## **Visual representation of the project directory**
-![ProjectTree](https://github.com/4veti/BulgarianBirds/assets/37193765/880f1432-4006-4643-93e3-ff85b0a947df)
-
 ## **Main functionality**
 
 - Flyout menu on the left. Two main pages, one for Tit birds, and one for Vultures;

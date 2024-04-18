@@ -26,15 +26,14 @@ The app was made in Xamarin.Forms using .NET 6 and C#:
 
 ## **Screenshots**
 
-- A standard page, here showcasing the "Big Tit"
- 
+- A standard page, here showcasing the "Big Tit":
 ![image](https://github.com/4veti/BulgarianBirds/assets/37193765/3d7be805-f2e5-43aa-8474-ffd3a45d43cf)
-- Here is the next image of the Big Tit, but brought to full screen and zoomed a little
 
+- Here is the next image of the Big Tit, but brought to full screen and zoomed a little:
 ![image](https://github.com/4veti/BulgarianBirds/assets/37193765/5ef22256-0f9e-4b17-9069-c436eaba0933)
-- This is the picker list of all birds
 
+- This is the picker list of all birds:
 ![image](https://github.com/4veti/BulgarianBirds/assets/37193765/458ddff6-1b00-4d90-a794-71ed99d5dbbe)
-- The flyout menu, showing the date at the bottom
 
+- The flyout menu, showing the date at the bottom:
 ![image](https://github.com/4veti/BulgarianBirds/assets/37193765/199ae447-d976-42a6-a86a-046486384590)

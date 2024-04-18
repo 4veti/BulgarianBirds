@@ -3,6 +3,13 @@ using System.Collections.Generic;
 
 namespace App_9_2.Models.BirdsInfo
 {
+    /// <summary>
+    /// This is just a static class that seeds in the sample collection of Tit birds and Vultures.
+    /// It only has 2 methods that return the collection with the wanted birds and their info.
+    /// The images are loaded from a 3rd party website and I'm not using a database, but using one
+    ///     would have been beyond the scope and purpose of this project.
+    /// Perhaps in the future I might do it with persistent storage.
+    /// </summary>
     public static class BirdsInfo
     {
         public static List<IBird> GetTitBirds()

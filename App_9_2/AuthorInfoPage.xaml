@@ -50,7 +50,7 @@
                    FontSize="Large"  FontAttributes="Bold" TextColor="Black" Margin="0, 0, 20, 0"/>
                     <Label Text="Информационни Системи и технологии" HorizontalTextAlignment="End" VerticalOptions="Center"
                    FontSize="Subtitle"  FontAttributes="Bold,Italic" TextColor="Black" Margin="0, 0, 20, 0"/>
-                    <Label Text="20251421001" HorizontalTextAlignment="End" VerticalOptions="Center"
+                    <Label Text="30541423069" HorizontalTextAlignment="End" VerticalOptions="Center"
                    FontSize="Subtitle"  FontAttributes="Bold,Italic" TextColor="Black" Margin="0, 0, 20, 0"/>
                     <Label Text="Обича да спи, пие бира и яде." HorizontalTextAlignment="End" VerticalOptions="Center"
                    FontSize="Subtitle"  FontAttributes="Bold,Italic" TextColor="Black" Margin="0, 0, 20, 0"/>

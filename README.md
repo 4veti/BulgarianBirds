@@ -1,7 +1,7 @@
 # Mobile app for Bulgarian Birds for a uni assignment
 
 ## **Summary**
-I made this app as a uni project for my mobile development classes. Initially it was a single-page app with a much simpler design, but I decided to extend it as a final project for the subject. There were several hurdles to overcome:
+I made this app as a uni project for my mobile development classes. It's about reading facts about Tit birds and Vultures in Bulgaria. Initially it was a single-page app with a much simpler design, but I decided to extend it as a final project for the subject. There were several hurdles to overcome:
 
 1. The xaml language. Dealing with the visual heirarchy and making the design render properly on different screen sizes really was a challenge. However, I much enjoyed the process of learning the new technology and being able to express myself better through the UI.
 2. The Shell structure. One of its benefits is that it loads each page as it's opened, and not all the sub-directories of the page at once. Figuring out how to configure it properly, render the flyout menu, and the pagination, definitely took some time. It was a good experience getting used to reading through Microsoft documentation.
@@ -26,7 +26,11 @@ The app was made in Xamarin.Forms using .NET 6 and C#:
 
 ## **Screenshots**
 
+> A standard page, here showcasing the "Big Tit"
 ![image](https://github.com/4veti/BulgarianBirds/assets/37193765/3d7be805-f2e5-43aa-8474-ffd3a45d43cf)
+> Here is the next image of the Big Tit, but brought to full screen and zoomed a little
 ![image](https://github.com/4veti/BulgarianBirds/assets/37193765/5ef22256-0f9e-4b17-9069-c436eaba0933)
+> This is the picker list of all birds
 ![image](https://github.com/4veti/BulgarianBirds/assets/37193765/458ddff6-1b00-4d90-a794-71ed99d5dbbe)
+> The flyout menu
 ![image](https://github.com/4veti/BulgarianBirds/assets/37193765/199ae447-d976-42a6-a86a-046486384590)
